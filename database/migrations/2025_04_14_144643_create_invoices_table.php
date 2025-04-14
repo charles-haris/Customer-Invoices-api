@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('customer_id');
             $table->foreign('customer_id')->on('customers')->references('id');
-            $table->integrt('amount');
+            $table->integer('amount');
             $table->string('status'); //Billed, Paid , Void
             $table->date('billed_date');
             $table->date('paid_date')->nullable();
