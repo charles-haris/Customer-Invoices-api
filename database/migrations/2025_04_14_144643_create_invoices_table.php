@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('invoices', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('customer_id');
-            $table->foreign('custom_id')->on('Costomer')->references('id');
+            $table->foreign('customer_id')->on('customers')->references('id');
             $table->integrt('amount');
             $table->string('status'); //Billed, Paid , Void
             $table->date('billed_date');
